@@ -1,0 +1,42 @@
+.title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+    
+  .exchangedate {
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(10px + 2vmin);
+    width: 40%;
+  }
+  
+  .symbol {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9vh;
+    animation: spinning 5s linear infinite;
+    &.left {
+      color:gold;
+    }
+    &.right {
+      color: blue;
+    }
+  }
+  
+  @keyframes spinning {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .header-rate {
+    width: 30%;
+    font-size: calc(7px + 2vmin);
+    font-weight: 600;
+  }
+}

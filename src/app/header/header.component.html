@@ -1,0 +1,8 @@
+<div class="title">
+  <div class="exchangedate">{{ this.usedCurrencies[0]?.exchangedate }}</div>
+  <div class="symbol left">{{ this.usedCurrencies[1]?.sign }}</div>
+  <div class="header-rate">1 USD = {{ this.usedCurrencies[1]?.rate }} UAH</div>
+  <div class="symbol right">{{ this.usedCurrencies[2]?.sign }}</div>
+  <div class="header-rate">1 EUR = {{ this.usedCurrencies[2]?.rate }} UAH</div>
+</div>
+<app-converter [usedCurrencies]="usedCurrencies"></app-converter>
