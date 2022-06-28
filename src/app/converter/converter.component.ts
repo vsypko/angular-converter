@@ -10,8 +10,8 @@ export class ConverterComponent {
   leftvalue = "1"
   rightvalue = "1"
   @Input() usedCurrencies: ICurrency[] = []
-  leftselect = 1
-  rightselect = 1
+  leftrate = 1
+  rightrate = 1
 
 
 
@@ -20,20 +20,20 @@ export class ConverterComponent {
   handleInput(e: any) {
     switch (e.target.name) {
       case "leftselect":
-        this.leftselect = Number(e.target.value);
-        this.rightvalue = (Number(this.leftvalue) * this.leftselect / this.rightselect).toFixed(2);
+        this.leftrate = Number(e.target.value);
+        this.rightvalue = (Number(this.leftvalue) * this.leftrate / this.rightrate).toFixed(2);
         break
       case "leftinput":
-        this.leftvalue = e.target.valueAsNumber
-        this.rightvalue = (Number(this.leftvalue) * this.leftselect / this.rightselect).toFixed(2);
+        this.leftvalue = e.target.value
+        this.rightvalue = (Number(this.leftvalue) * this.leftrate / this.rightrate).toFixed(2);
           break
       case "rightselect":
-        this.rightselect = Number(e.target.value)
-        this.leftvalue = (Number(this.rightvalue) * this.rightselect/this.leftselect).toFixed(2)
+        this.rightrate = Number(e.target.value)
+        this.leftvalue = (Number(this.rightvalue) * this.rightrate/this.leftrate).toFixed(2)
             break
       case "rightinput":
-        this.rightvalue = e.target.valueAsNumber
-        this.leftvalue = (Number(this.rightvalue) * this.rightselect / this.leftselect).toFixed(2);
+        this.rightvalue = e.target.value
+        this.leftvalue = (Number(this.rightvalue) * this.rightrate / this.leftrate).toFixed(2);
               break
     }
   }

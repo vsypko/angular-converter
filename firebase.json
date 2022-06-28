@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/angr-converter",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
